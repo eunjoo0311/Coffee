@@ -35,8 +35,7 @@ h2 {
 }
 
 /* 스타일 초기화 */
-button,
-input {
+button {
   border: 0;
   background: none;
   font: inherit;
@@ -70,23 +69,75 @@ image {
   width: 237px;
   line-height: 0; /* 이미지 여백 공간 제거 */
 }
-.todo-list img {
+.bean3 {
   position: absolute;
+  content: " ";
+  top: 10px;
+  right: 29px;
+}
+.coffee {
+  position: absolute;
+  content: " ";
+  bottom: 10px;
+  left: 0px;
+}
+
+.todo {
+  background-color: red;
 }
 .todo-list h2 {
   font-weight: 400;
   font-size: 30px;
   line-height: 54px;
-  margin-top: 80px;
   margin-left: 61px;
   color: #eeeeee;
 }
 
-.bean3-container {
+.check {
+  margin: 30px 17px 30px 40px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid #b9b9b9;
+  width: 21px;
+  height: 21px;
+  outline: none;
+  background-color: transparent;
+  background-image: url("./images/mark.png");
+  background-position: center;
+  background-repeat: no-repeat;
 }
-/* list */
+input.check:checked {
+  background-image: url("./images/mark.png");
+}
+input.check:not(:checked) {
+  background-image: none;
+}
 
 .txt {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 350px;
+  border-bottom: 2px solid #b9b9b9;
+}
+li {
+  display: flex;
+  align-items: center;
+}
+
+.todo-list button {
+  width: 123px;
+  height: 49px;
+  background: #c1976d;
+  border-bottom: 5px solid #846445;
+  border-radius: 10px;
+  font-family: "Black Han Sans";
+  font-size: 20px;
+  line-height: 33px;
+  color: #ffffff;
+  margin-top: 78px;
+  margin-left: 306px;
 }
 /* MEMO */
 .memo {
