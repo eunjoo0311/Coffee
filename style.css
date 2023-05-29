@@ -17,7 +17,9 @@ h2 {
   font-family: "Black Han Sans", sans-serif;
 }
 .layout {
+  display: flex;
   align-items: center;
+  height: 100vh;
 }
 
 .container {
@@ -41,6 +43,7 @@ input {
   color: inherit;
 }
 
+div,
 body,
 h1,
 h2,
@@ -53,17 +56,22 @@ image {
 }
 /* TODO */
 .todo-list {
+  display: flex;
+  flex-direction: column;
   width: 471px;
   grid-area: section1;
   background: #5c4942;
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
 }
-.top {
-  width: 471px;
-  display: inline-block;
+
+/* img는 inline 요소로 div로 감싸기 */
+.bottom-container {
+  width: 237px;
+  line-height: 0; /* 이미지 여백 공간 제거 */
 }
-.bottom {
-  width: 471px;
+.todo-list img {
+  position: absolute;
 }
 .todo-list h2 {
   font-weight: 400;
@@ -74,10 +82,9 @@ image {
   color: #eeeeee;
 }
 
-/* list */
-.list {
-  display: flex;
+.bean3-container {
 }
+/* list */
 
 .txt {
 }
