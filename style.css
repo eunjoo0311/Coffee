@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "KCCChassam";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCCChassam.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .a11y-hidden {
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
@@ -15,6 +23,10 @@ body {
 
 h2 {
   font-family: "Black Han Sans", sans-serif;
+  color: #eeeeee;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
 }
 .layout {
   display: flex;
@@ -57,7 +69,9 @@ image {
 .todo-list {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 471px;
+  height: 665px;
   grid-area: section1;
   background: #5c4942;
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
@@ -78,23 +92,26 @@ image {
 .coffee {
   position: absolute;
   content: " ";
+  width: 122px;
   bottom: 10px;
   left: 0px;
 }
 
 .todo {
-  background-color: red;
+  position: absolute;
+  content: "";
+  margin-top: 80px;
 }
 .todo-list h2 {
   font-weight: 400;
   font-size: 30px;
   line-height: 54px;
   margin-left: 61px;
-  color: #eeeeee;
+  margin-bottom: 15px;
 }
 
 .check {
-  margin: 30px 17px 30px 40px;
+  margin: 15px 17px 15px 40px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -120,15 +137,18 @@ input.check:not(:checked) {
   background-color: transparent;
   width: 350px;
   border-bottom: 2px solid #b9b9b9;
-}
+  font-family: "KCCChassam";
+  font-size: 20px;
+  line-height: 17px;
+  color: #ffffff;
+} /* 말 줄임표*/
 li {
   display: flex;
   align-items: center;
 }
 
-.todo-list button {
-  width: 123px;
-  height: 49px;
+.todo button {
+  padding: 8px 30px;
   background: #c1976d;
   border-bottom: 5px solid #846445;
   border-radius: 10px;
@@ -136,22 +156,105 @@ li {
   font-size: 20px;
   line-height: 33px;
   color: #ffffff;
-  margin-top: 78px;
+  margin-top: 63px;
   margin-left: 306px;
+}
+.todo button:active {
+  border: 0;
+  transform: translateY(5px);
 }
 /* MEMO */
 .memo {
   width: 421px;
+  height: 348px;
   grid-area: section2;
-
   background: #c2976c;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.25);
+}
+.memo-header {
+  display: flex;
+  gap: 88px;
+  justify-content: flex-end;
+  margin-top: 17px;
+}
+
+.delete {
+  border: none;
+  margin-right: 38px;
+}
+
+.delete:hover {
+  background-color: red;
+}
+.delete:active {
+  background-color: gray;
+}
+
+.memo span {
+  display: block;
+  width: 334px;
+  border-bottom: 3px solid #5c4942;
+  margin-left: 49px;
+  margin-bottom: 15px;
+}
+textarea {
+  width: 366px;
+  height: 246px;
+  margin-left: 28px;
+  background-color: transparent;
+  font-family: "KCCChassam";
+  font-size: 20px;
+  line-height: 25px;
+  color: #ffffff;
+  border: none;
+  outline: none;
+}
+
+textarea::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Change the scrollbar thumb color */
+textarea::-webkit-scrollbar-thumb {
+  background-color: #5c4942;
+  border-radius: 5px;
+}
+
+/* Change the scrollbar width and height */
+textarea::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
 }
 /*COUPON */
 .coupon {
   width: 423px;
+  height: 271.99px;
   grid-area: section3;
   background: #73462f;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
+  position: relative;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.coupon h2 {
+  margin-left: 252.22px;
+  margin-top: 188.18px;
+}
+.coupon .coffee2 {
+  position: absolute;
+  content: "";
+  width: 255.38px;
+  top: 8px;
+  left: 0;
+}
+.coupon .bean2 {
+  position: absolute;
+  content: "";
+  width: 97.25px;
+  top: 38.74px;
+  left: 161.46px;
+}
+
+.coupon:hover {
+  transform: scale(1.2);
 }

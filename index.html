@@ -22,7 +22,7 @@
           <img src="./images/top-wave.png" alt="" />
           <div class="sticker">
             <img class="bean3" src="./images/bean3.png" alt="" />
-            <img src="./images/coffee.png" alt="" class="coffee" />
+            <img src="./images/coffee.svg" alt="" class="coffee" />
           </div>
           <div class="todo">
             <h2>TO DO</h2>
@@ -61,39 +61,15 @@
           <div class="bottom-container">
             <img src="./images/bottom-wave.png" alt="" />
           </div>
-
-          <!-- <div class="todo">
-            <h2>TO DO</h2>
-            <ul class="list">
-              <li>
-                <input type="checkbox" /> <input type="text" class="txt-1" />
-              </li>
-              <li>
-                <input type="checkbox" /> <input type="text" class="txt-2" />
-              </li>
-              <li>
-                <input type="checkbox" /> <input type="text" class="txt-3" />
-              </li>
-              <li>
-                <input type="checkbox" /> <input type="text" class="txt-4" />
-              </li>
-              <li>
-                <input type="checkbox" /> <input type="text" class="txt-5" />
-              </li>
-              <li>
-                <input type="checkbox" /> <input type="text" class="txt-6" />
-              </li>
-              <li>
-                <input type="checkbox" /> <input type="text" class="txt-7" />
-              </li>
-            </ul>
-            <button type="reset">RESET</button>
-          </div> -->
         </section>
         <section class="memo">
-          <h2>MEMO</h2>
-          <button type="button"></button>
-          <span> |</span>
+          <div class="memo-header">
+            <h2>Memo</h2>
+            <button class="delete" type="button">
+              <img src="images/trash.png" alt="" />
+            </button>
+          </div>
+          <span></span>
           <textarea
             name="memo-txt"
             id="memo-txt"
@@ -103,8 +79,12 @@
         </section>
         <section class="coupon">
           <h2>COFFEE</h2>
+          <img class="coffee2" src="images/coffee.svg" alt="" />
+          <img class="bean2" src="images/bean2.svg" alt="" />
         </section>
       </div>
+
+      <article id="modal"></article>
     </div>
   </body>
 </html>
