@@ -183,13 +183,6 @@ li {
   margin-right: 38px;
 }
 
-.delete:hover {
-  background-color: red;
-}
-.delete:active {
-  background-color: gray;
-}
-
 .memo span {
   display: block;
   width: 334px;
@@ -257,4 +250,100 @@ textarea::-webkit-scrollbar {
 
 .coupon:hover {
   transform: scale(1.2);
+}
+
+/* modal */
+#modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-container {
+  position: relative;
+  width: 531px;
+  height: 344px;
+  transform-style: preserve-3d;
+  transition: transform ease 1s;
+}
+
+/* modal front*/
+.modal-front,
+.modal-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #73462f;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  backface-visibility: hidden;
+}
+.modal-front h2 {
+  position: absolute;
+  content: "";
+  font-size: 40px;
+  line-height: 72px;
+  top: 238px;
+  left: 319px;
+  color: #eeeeee;
+}
+.modal-coffee {
+  position: absolute;
+  content: "";
+  width: 323px;
+  top: 10px;
+  left: 0;
+  z-index: 10;
+}
+.modal-bean {
+  position: absolute;
+  content: "";
+  width: 123px;
+  top: 39px;
+  left: 208px;
+}
+
+/* modal back */
+.modal-back {
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  position: relative;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.circles-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  row-gap: 52px;
+  column-gap: 37px;
+}
+
+.circle {
+  display: inline-block;
+  width: 65px;
+  height: 65px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.zone {
+  width: 531px;
+  height: 32px;
+
+  background: #c2976c;
 }
