@@ -33,17 +33,53 @@ h2 {
   align-items: center;
   height: 100vh;
 }
+/*pc*/
+@media (min-width: 971px) {
+  .container {
+    width: 971px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      "section1 section2"
+      "section1 section3";
+    column-gap: 79px;
+    row-gap: 45px;
+  }
 
-.container {
-  width: 971px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-areas:
-    "section1 section2"
-    "section1 section3";
-  column-gap: 79px;
-  row-gap: 45px;
+  .todo-list {
+    grid-area: section1;
+  }
+
+  .memo {
+    grid-area: section2;
+  }
+
+  .coupon {
+    grid-area: section3;
+  }
+}
+
+/* mobile */
+@media (max-width: 971px) {
+  .container {
+    width: 100%;
+    padding: 50px 20px; /* 컨테이너에 약간의 패딩 추가 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .todo-list,
+  .memo,
+  .coupon {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .layout {
+    align-items: flex-start; /* 모바일 기기에 맞게 정렬 조정 */
+  }
 }
 
 /* 스타일 초기화 */
@@ -70,9 +106,8 @@ image {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 471px;
+  max-width: 471px;
   height: 665px;
-  grid-area: section1;
   background: #5c4942;
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
   position: relative;
@@ -141,7 +176,7 @@ input.check:not(:checked) {
   font-size: 20px;
   line-height: 17px;
   color: #ffffff;
-} /* 말 줄임표*/
+}
 li {
   display: flex;
   align-items: center;
@@ -165,9 +200,9 @@ li {
 }
 /* MEMO */
 .memo {
-  width: 421px;
+  max-width: 421px;
   height: 348px;
-  grid-area: section2;
+
   background: #c2976c;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.25);
 }
@@ -207,22 +242,21 @@ textarea::-webkit-scrollbar-track {
   background-color: transparent;
 }
 
-/* Change the scrollbar thumb color */
+/* 스크롤바 */
 textarea::-webkit-scrollbar-thumb {
   background-color: #5c4942;
   border-radius: 5px;
 }
 
-/* Change the scrollbar width and height */
 textarea::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
 /*COUPON */
 .coupon {
-  width: 423px;
+  max-width: 423px;
   height: 271.99px;
-  grid-area: section3;
+
   background: #73462f;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
